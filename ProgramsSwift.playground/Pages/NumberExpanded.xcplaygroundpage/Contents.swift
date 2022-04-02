@@ -2,9 +2,8 @@ func expandedForm(_ num: Int) -> String {
     let numStr = String(num)
     var outputStr = ""
     var mul : Int = 1
-    for (i, el) in numStr.enumerated(){
+    for (i, el) in numStr.enumerated() where Int(String(el)) != 0{
         mul = 1
-        if Int(String(el)) == 0{ continue }
         for _ in 0..<Int(numStr.count)-i-1{
             mul *= 10
         }
@@ -15,4 +14,4 @@ func expandedForm(_ num: Int) -> String {
     outputStr = String(outputStr.dropLast(2))
     return outputStr
 }
-expandedForm(70304)
+expandedForm(14204)

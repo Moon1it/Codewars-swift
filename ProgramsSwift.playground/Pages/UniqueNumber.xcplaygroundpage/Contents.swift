@@ -7,10 +7,8 @@ func findUniq(_ arr: [Int]) -> Int {
             dict[el] = 1
         }
     }
-    for (key, value) in dict{
-        if value == 1{
-            return key
-        }
+    for (key, value) in dict where value == 1{
+        return key
     }
     return 0
 }
