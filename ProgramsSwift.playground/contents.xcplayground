@@ -3,5 +3,6 @@
     <pages>
         <page name='NumberExpanded'/>
         <page name='UniqueNumber'/>
+        <page name='GoodVsEvil '/>
     </pages>
 </playground>
