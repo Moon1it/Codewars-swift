@@ -5,5 +5,6 @@
         <page name='UniqueNumber'/>
         <page name='GoodVsEvil '/>
         <page name='Mumbling'/>
+        <page name='CorrectTimeString '/>
     </pages>
 </playground>
