@@ -6,4 +6,5 @@
   <li>Find the unique number - https://www.codewars.com/kata/585d7d5adb20cf33cb000235/solutions/swift</li>
   <li>Good vs Evil - https://www.codewars.com/kata/52761ee4cffbc69732000738/train/swift</li>
   <li>Mumbling - https://www.codewars.com/kata/5667e8f4e3f572a8f2000039/swift</li>
+  <li>Correct the time-string - https://www.codewars.com/kata/57873ab5e55533a2890000c7/swift</li>
 </ul>
