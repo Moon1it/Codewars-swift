@@ -6,5 +6,7 @@
         <page name='GoodVsEvil '/>
         <page name='Mumbling'/>
         <page name='CorrectTimeString '/>
+        <page name='ClosuresExercise'/>
+        <page name='CorrectTimeString2.0'/>
     </pages>
 </playground>

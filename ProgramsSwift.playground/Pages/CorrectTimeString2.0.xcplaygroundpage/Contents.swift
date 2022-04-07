@@ -8,35 +8,17 @@ func correctRegularEx(_ str: String) -> Int{
     return results
 }
 
-func transformTime(_ currentLevel: Int,_ nextLevel: Int?) -> (Int, Int?){
-    var cur = 0
-    if nextLevel == nil{
-        if currentLevel >= 24{ // Часы
-            cur = currentLevel % 24
-        }
-        return (cur, nil)
-    }else{
-        var next = 0
-        if currentLevel >= 60{
-            cur = currentLevel % 60 //timeInt[2]
-            next = nextLevel! + currentLevel / 60 //timeInt[1]
-        }
-    return (cur, next)
-    }
-}
-
-func correct(_ timeString: String?) -> String? {
+func correct(_ timeString: String?,_ ClosureTime: (Int, Int?) -> (Int, Int?)) -> String? {
     if timeString == "" || timeString == nil{ return timeString } // Проверка на "" и nil
     if correctRegularEx(timeString!) != 1{ return nil } // Поверка по регулярному выражению
     var timeInt = timeString!.split(whereSeparator: {$0 == ":"}).compactMap{ Int($0) }
-    
-    var timeResult = transformTime(timeInt[2], timeInt[1])
+    var timeResult = ClosureTime(timeInt[2], timeInt[1])
     timeInt[2] = timeResult.0
     timeInt[1] = timeResult.1!
-    timeResult = transformTime(timeInt[1], timeInt[0])
+    timeResult = ClosureTime(timeInt[1], timeInt[0])
     timeInt[1] = timeResult.0
     timeInt[0] = timeResult.1!
-    timeResult = transformTime(timeInt[0], nil)
+    timeResult = ClosureTime(timeInt[0], nil)
     timeInt[0] = timeResult.0
     
     var outputStr = ""
@@ -50,4 +32,16 @@ func correct(_ timeString: String?) -> String? {
     }
     return outputStr
 }
-correct("59:88:125")
+correct("59:88:125"){
+    var cur = 0
+    if $1 == nil{
+        if $0 >= 24{ cur = $0 % 24 }
+        return (cur, nil)
+    }
+    var next = 0
+    if $0 >= 60{ // Минуты, секунды
+        cur = $0 % 60
+        next = $1! + $0 / 60
+    }
+    return (cur, next)
+}
