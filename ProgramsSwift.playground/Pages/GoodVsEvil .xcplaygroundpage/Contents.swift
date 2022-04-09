@@ -9,6 +9,7 @@ func Score(_ dict: [Int : Int],_ troops: String) -> Int{
 func evaluate(good: String, vsEvil: String) -> String {
     let goodDict = [0 : 1, 1 : 2, 2 : 3, 3 : 3, 4 : 4, 5 : 10]
     let evilDict = [0 : 1, 1 : 2, 2 : 2, 3 : 2, 4 : 3, 5 : 5, 6 : 10]
+    
     switch Score(goodDict, good) - Score(evilDict, vsEvil){
     case 1...:
         return "Battle Result: Good triumphs over Evil"

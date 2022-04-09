@@ -8,5 +8,7 @@
         <page name='CorrectTimeString '/>
         <page name='ClosuresExercise'/>
         <page name='CorrectTimeString2.0'/>
+        <page name='classExercise'/>
+        <page name='GoodVsEvilClass'/>
     </pages>
 </playground>
