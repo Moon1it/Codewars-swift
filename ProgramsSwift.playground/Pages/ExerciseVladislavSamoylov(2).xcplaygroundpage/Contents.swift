@@ -1,4 +1,6 @@
+// Filter array, closures
 let firstArrayCountries = ["USA", "Australia", "Australia", "NewZeland", "Mexico", "Turkey", "Thailand", "TheUnitedKingdom", "Poland", "Gremany", "BrazilA", "AaA", "AAAAAAAAA"]
+
 func filterCountries(_ firstCountries: [String], filter: (String)->Bool)->[String]{
     var outputArray = [String]()
     for value in firstCountries{

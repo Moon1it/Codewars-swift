@@ -1,3 +1,5 @@
+// typealias, closures
+
 typealias shopBagType = [Int : String]
 typealias filterType = (String) -> Bool
 
@@ -13,7 +15,6 @@ func printShopBag(_ bag : shopBagType, filter : filterType)->[String]{
     }
     return duplicateArray
 }
-
 
 func readDict() -> shopBagType{
     print("How many product are there in shopBag?")
