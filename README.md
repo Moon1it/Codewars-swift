@@ -1,4 +1,4 @@
-<h1>CodeWarsProgramsSwift</h1>
+<h1>Codewars-swift</h1>
 Задачи с платформы https://www.codewars.com/ для отработки основ и базовых конструкций. 
 
 <ul>
